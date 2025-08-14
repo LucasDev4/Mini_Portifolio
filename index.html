@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifilio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#">Rodrigues</a>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="language-toggle">
+    <button id="lang-btn">English</button>
+</div>
+
+<div class="container">
+    <img src="MyPicture.jpeg" alt="Me">
+    <div class="text-container" id="bio-text">
+        <h1>Hello world! I'm <span class="highlight">Lucas</span>.</h1>
+        <hr style="margin-bottom: 10px;">
+        <h6 class="miniText">Meu nome é Lucas Rodrigues e sou um Programador Full-Stack em início de carreira, com foco principal</h6>
+        <h6 class="miniText">em Java. Estou constantemente em busca de aprimoramento e novos conhecimentos. Possuo habilidades medias em</h6>
+        <h6 class="miniText">inglês e habilidades de liderança, destacando-me como um líder eficaz em projetos de equipe.</h6>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById("lang-btn");
+    const bio = document.getElementById("bio-text");
+
+    const pt = `
+        <h1>Hello world! I'm <span class="highlight">Lucas</span>.</h1>
+        <hr style="margin-bottom: 10px;">
+        <h6 class="miniText">Meu nome é Lucas Rodrigues e sou um Programador Full-Stack em início de carreira, com foco principal</h6>
+        <h6 class="miniText">em Java. Estou constantemente em busca de aprimoramento e novos conhecimentos. Possuo habilidades medias em</h6>
+        <h6 class="miniText">inglês e habilidades de liderança, destacando-me como um líder eficaz em projetos de equipe.</h6>
+    `;
+
+    const en = `
+        <h1>Hello world! I'm <span class="highlight">Lucas</span>.</h1>
+        <hr style="margin-bottom: 10px;">
+        <h6 class="miniText">My name is Lucas Rodrigues, and I am an early-career Full-Stack Developer with a primary focus on Java. I</h6>
+        <h6 class="miniText">am continuously seeking to improve and expand my knowledge. I have media skills in English and possess</h6>
+        <h6 class="miniText">strong leadership skills, excelling as an effective team leader in collaborative projects.</h6>
+    `;
+
+    let isEnglish = false;
+
+    btn.addEventListener("click", () => {
+        bio.innerHTML = isEnglish ? pt : en;
+        btn.textContent = isEnglish ? "English" : "Português";
+        isEnglish = !isEnglish;
+    });
+</script>
+<div class="social-buttons">
+    <a href="https://github.com/LucasDev4" target="_blank" class="social-btn">
+        <img src="icons8-github-30.png" alt="GitHub" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/lucas_dev16/" target="_blank" class="social-btn">
+        <img src="icons8-instagram-logo-30.png" alt="Instagram" class="social-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/lucas-rodrigues-ferraz-121a7a36b/" target="_blank" class="social-btn">
+        <img src="icons8-linkedin-24.png" alt="LinkedIn" class="social-icon">
+    </a>
+</div>
+
+</body>
+</html>

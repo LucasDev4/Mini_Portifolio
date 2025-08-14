@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* Remove a rolagem */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* impede scroll */
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Ajusta container para caber na tela */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* mais espaço entre imagem e texto */
+   
+    padding: 40px; /* respiro interno */
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.text-container {
+    display: flex;
+    flex-direction: column; /* h1 em cima, h4 embaixo */
+}
+img {
+    height: 250px; 
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.7);
+    animation: pulseGlow 2s infinite alternate;
+    background-color: white;
+}
+
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(0, 102, 255, 1);
+    }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover{
+    opacity: 0.7;
+}
+h1 {
+    font-size: 2rem;
+    color: white;
+}
+.miniText {
+    font-size: 15px;
+    color: #ccc;
+}
+.highlight {
+    color: rgb(0, 102, 255, 0.7); /* azul como exemplo */
+}
+.logo {
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: rgba(0, 102, 255, 0.9);
+    text-decoration: none;
+    background: transparent; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, menu/hamburguer à direita */
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 32px; /* espaçamento lateral */
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 32px; /* espaçamento igual entre itens */
+    padding: 0;
+    margin: 0;
+    
+}
+
+.nav-list li a {
+    color: rgba(0, 102, 255, 0.9);
+    text-decoration: none;
+    font-weight: 600; /* um pouco mais grosso */
+    font-size: 1.2rem; /* aumenta o tamanho */
+    padding: 4px 8px; /* um respiro extra */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-list li a:hover {
+    color: #339CFF; /* azul mais claro no hover */
+    transform: translateY(-2px); /* sobe levemente */
+}
+/* Botões fixos no canto inferior direito */
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    background-color: transparent;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007BFF;
+    transition: all 0.25s ease-in-out;
+}
+
+.social-btn:hover {
+    background-color: #007BFF;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5);
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: filter 0.25s ease-in-out;
+}
+
+.social-btn:hover .social-icon {
+    filter: brightness(1.2);
+}
+.social-icon img{
+    background-color: white;
+}
+.language-toggle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px; /* canto oposto dos outros botões */
+}
+
+.language-toggle button {
+    padding: 8px 14px;
+    background-color: rgba(0, 102, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.language-toggle button:hover {
+    opacity: 0.8;
+}
+
+
